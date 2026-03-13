@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+            .my-box {
+            border: 2px solid #333;
+            padding: 30px;
+            margin: 30px;
+            font-family: Arial, sans-serif;
+            line-height: auto;
+            width: auto;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+            background: linear-gradient( -45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab );
+            background-size: 400% 400%;
+
+            animation: gradientAnimation 15s ease infinite;
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    </style>
+
+     <style>
+    /* Link ကို ခလုတ်ပုံစံဖြစ်အောင် ပြောင်းလဲခြင်း */
+    .button-link {
+      display: inline-block;
+      padding: 15px 30px;
+      background: linear-gradient(135deg, #ff416c, #ff4b2b); /* အနီရောင်ပြေးလေး */
+      color: white; /* စာသားအရောင် */
+      text-decoration: none; /* Link မှာပါတဲ့ အောက်ကမျဉ်းတားကို ဖျောက်ခြင်း */
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 10px; /* ထောင့်လေးတွေကို နည်းနည်းဝိုင်းစေခြင်း */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: 0.3s;
+    }
+
+    /* Mouse တင်လိုက်ရင် ဖြစ်မယ့်အလှ */
+    .button-link:hover {
+      background: linear-gradient(135deg, #ff4b2b, #ff416c);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+      transform: scale(1.05); /* နည်းနည်းလေး ကြီးလာမယ် */
+    }
+  </style>
+
+  <style>
+  .floating-button {
+    /* ၁။ နေရာကို တစ်သတ်မှတ်တည်းဖြစ်အောင် Fixed ထားမယ် */
+    position: fixed;
+    
+    /* ၂။ အောက်ခြေကနေ ဘယ်လောက်ကွာမလဲ (ဥပမာ - 20px) */
+    bottom: 20px;
+    
+    /* ၃။ ညာဘက်ဘေးကနေ ဘယ်လောက်ကွာမလဲ (ဥပမာ - 20px) */
+    right: 20px;
+
+    /* ခလုတ်အလှဆင်ခြင်း */
+    background: #007bff;
+    color: white;
+    padding: 15px 25px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 1000; /* တခြားစာသားတွေရဲ့ အပေါ်မှာ အမြဲရှိနေအောင် */
+  }
+
+  .floating-button:hover {
+    background: #0056b3;
+  }
+</style>
+
+</head>
+<body>
+    <div  style="text-align: center;"><h1>HTML Some Tags</h1></div>
+    <div class="content my-box" >
+       <ul> <p>၁။ Form (အချက်အလက် ကောက်ယူသည့် Tag များ)
+<li>User တွေဆီက အချက်အလက်တောင်းတဲ့အခါ (ဥပမာ - Login ဝင်တာ၊ အကောင့်သစ်ဖွင့်တာ၊ မက်ဆေ့ချ်ပိုတာ) တွေမှာ ဒီ Tag တွေကို အဓိက သုံးပါတယ်။</li>
+ <li>* < form>: ဖောင်တစ်ခုလုံးကို အုပ်ထားပေးတဲ့ အဓိက Tag ပါ။</li>
+ <li>* < input>: စာရိုက်ထည့်လိုရတဲ့ အကွက်လေးတွေ ဖန်တီးဖိုပါ။ အမျိုးအစား (Type) ပေါ်မူတည်ပြီး စာရိုက်ဖို၊ Password ထည့်ဖို၊ အမှန်ခြစ် (Checkbox) လုပ်ဖို စသဖြင့် ပြောင်းလဲသွားပါတယ်။</li>
+ <li>* < label>: အဲဒီ Input အကွက်တွေရဲ့ နာမည် (စာသား) ကို ဖော်ပြဖိုပါ။</li>
+ <li>* < button>: Click နှိပ်လိုရတဲ့ ခလုတ်လေးတွေ ဖန်တီးဖိုပါ။ (ဥပမာ- "Submit" သိုမဟုတ် "Login" ခလုတ်)</li>
+ <li>* < textarea>: စာအရှည်ကြီးတွေ (ဥပမာ- Comment သိုမဟုတ် Message) ရိုက်ထည့်ဖို နေရာကျယ်ကျယ် ဖန်တီးပေးပါတယ်။ </li> </p>
+        <p>၂။ Text Formatting (စာသား ပုံစံပြောင်း Tag များ)
+စာသားတွေကို ပိုပြီး ပေါ်လွင်အောင် အလှဆင်တဲ့အခါ သုံးပါတယ်။</p>
+        <li>< i> သိုမဟုတ် < em>: စာလုံးစောင်း (Italic) ဖြစ်အောင် လုပ်ပေးပါတယ်။</li>
+        <li>< b>: စာလုံးအမည်း/အထူ (Bold) ဖြစ်အောင် လုပ်ပေးပါတယ်။ (< strong> နဲ့ အလုပ်လုပ်ပုံ ဆင်တူပါတယ်)</li>
+        <li>< mark>: စာသားကို Highlighter တားထားသလို အဝါရောင်လေးနဲ့ မှတ်ထားချင်ရင် သုံးပါတယ်။</li>
+        <li>< blockquote>: သူများပြောခဲ့တဲ့ စာသား ဒါမှမဟုတ် ကိုးကားချက် (Quote) တွေကို သီးသန့် ဖယ်ထုတ်ပြချင်ရင် သုံးပါတယ်။</li>
+
+        <p>၃။ Table (ဇယားကွက် အစိတ်အပိုင်း Tag များ)
+အရင်က < table> ဆိုတဲ့ Tag အကြောင်း ပြောခဲ့ပေမဲ့ အဲဒီ ဇယားထဲမှာ အချက်အလက်ထည့်ဖို အောက်ပါ Tag လေးတွေ ထပ်ပြီး တွဲသုံးရပါတယ်။</p>
+            <li>< tr> (Table Row): ဇယားရဲ့ အတန်းတစ်တန်းကို ဖန်တီးပါတယ်။</li>
+            <li>< th> (Table Header): ဇယားရဲ့ ခေါင်းစဉ် (Column Name) အတွက် သုံးပါတယ်။ စာလုံးနည်းနည်း ပိုထူပြီး အလယ်မှာ ပေါ်လေ့ရှိပါတယ်။</li>
+            <li> < td> (Table Data): ဇယားထဲက အချက်အလက် အကွက်တစ်ခုချင်းစီ ထည့်ဖို သုံးပါတယ်။</li>
+
+            <h1><p>အခြားအရေးကြီးသော Tag များ</p></h1>
+        <li>< iframe>: ကိုယ့် Website ထဲမှာ တခြား Website ရဲ့ အစိတ်အပိုင်း (ဥပမာ- YouTube Video, Google Maps) တွေကို မြှုပ်ပြီး ထည့်ချင်ရင် သုံးပါတယ်။</li>
+
+        <h2>ယခုက အခြေခံလေးများကိုပြောပြ ပေးသွားတာပါ။
+            နောင်တစ်ခါမှာတော့ အခြေခံအကြောင်းတွေကို နားလည်လောက်မယ်လို့ထင်ပါတယ်။ လိုအပ်ချက်များရှိသွာရင်း ပိုမိုကောင်းမွန်သောပြင်ဆင်မှုများနှင့် ပြန်လာပါမယ်။
+        </h2>
+        <h3>Thanks you for given your time</h3>               
+    </ul>
+    </div>
+      <a href="index.html" class="button-link">
+   click and Go back home
+  </a>
+
+   <a href="https://t.me/Nyi_Nyi_12" target="_blank" class="floating-button">
+    Contact to me in telegram</a>
+
+    
+</body>
+</html>
